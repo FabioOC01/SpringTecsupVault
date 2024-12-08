@@ -26,14 +26,6 @@ public class ProyectoService {
         Optional<ProyectoIntegrador> proyectoExistente = proyectoIntegradorRepository.findById(id);
         if (proyectoExistente.isPresent()) {
             ProyectoIntegrador proyectoIntegradorAActualizar = proyectoExistente.get();
-            proyectoIntegradorAActualizar.setTitulo(proyectoIntegrador.getTitulo());
-            proyectoIntegradorAActualizar.setDescripcion(proyectoIntegrador.getDescripcion());
-            proyectoIntegradorAActualizar.setAño(proyectoIntegrador.getAño());
-            proyectoIntegradorAActualizar.setImagen(proyectoIntegrador.getImagen());
-            proyectoIntegradorAActualizar.setDocumento(proyectoIntegrador.getDocumento());
-            proyectoIntegradorAActualizar.setVideo(proyectoIntegrador.getVideo());
-            proyectoIntegradorAActualizar.setUrlGithub(proyectoIntegrador.getUrlGithub());
-            proyectoIntegradorAActualizar.setCategoria(proyectoIntegrador.getCategoria());
             return proyectoIntegradorRepository.save(proyectoIntegradorAActualizar);
         } else {
             return null;

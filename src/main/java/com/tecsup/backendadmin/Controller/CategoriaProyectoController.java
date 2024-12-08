@@ -1,4 +1,4 @@
-package com.tecsup.backendadmin.controllers;
+package com.tecsup.backendadmin.Controller;
 
 import com.tecsup.backendadmin.Models.CategoriaProyecto;
 import com.tecsup.backendadmin.Repository.CategoriaProyectoRepository;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/categorias")
+@RequestMapping("/categorias")
 public class CategoriaProyectoController {
 
     @Autowired
@@ -40,7 +40,6 @@ public class CategoriaProyectoController {
     public ResponseEntity<CategoriaProyecto> actualizarCategoria(@PathVariable Long id, @RequestBody CategoriaProyecto nuevaCategoria) {
         return categoriaProyectoRepository.findById(id).map(categoria -> {
             categoria.setNombre(nuevaCategoria.getNombre());
-            categoria.setDescripcion(nuevaCategoria.getDescripcion());
             return ResponseEntity.ok(categoriaProyectoRepository.save(categoria));
         }).orElse(ResponseEntity.notFound().build());
     }

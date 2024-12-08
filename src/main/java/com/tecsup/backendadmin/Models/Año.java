@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.Year;
 
 @Entity
-@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"año", "semestre"})})
+@Table(name = "api_proyectos_año", uniqueConstraints = {@UniqueConstraint(columnNames = {"año", "semestre"})})
 public class Año {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

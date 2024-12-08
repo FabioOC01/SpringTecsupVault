@@ -16,7 +16,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    // Método para obtener un usuario por su nombre de usuario
+
     @GetMapping("/{username}")
     public ResponseEntity<Usuario> getUser(@PathVariable String username) {
         Usuario usuario = usuarioService.findByUsername(username);

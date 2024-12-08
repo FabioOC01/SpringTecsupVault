@@ -3,6 +3,7 @@ package com.tecsup.backendadmin.Models;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "api_proyectos_seccion")
 public class Seccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

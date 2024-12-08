@@ -15,7 +15,7 @@ public class UsuarioService implements UserDetailsService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    // Método para cargar un usuario por nombre de usuario (para autenticación)
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Usuario usuario = usuarioRepository.findByUsername(username)
@@ -27,7 +27,7 @@ public class UsuarioService implements UserDetailsService {
         );
     }
 
-    // Método para obtener un usuario por nombre de usuario
+
     public Usuario findByUsername(String username) {
         return usuarioRepository.findByUsername(username).orElse(null); // Devuelve el usuario o null si no existe
     }
