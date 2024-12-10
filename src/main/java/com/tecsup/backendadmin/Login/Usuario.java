@@ -3,19 +3,24 @@ package com.tecsup.backendadmin.Login;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "usuario")
 public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
-    private String username;
-
     @Column(nullable = false)
     private String password;
 
-    private String role; // Ejemplo: "USER" o "ADMIN"
+    @Column
+    private String role;
+
+    @Column(nullable = false, unique = true)
+    private String username;
+
+    @Column(nullable = false, unique = true)  // email no debe ser nulo y único
+    private String email;  // Añadido el campo de email
 
     // Getters y Setters
     public Long getId() {
@@ -24,14 +29,6 @@ public class Usuario {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -48,5 +45,21 @@ public class Usuario {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;  // Getter para email
+    }
+
+    public void setEmail(String email) {
+        this.email = email;  // Setter para email
     }
 }
