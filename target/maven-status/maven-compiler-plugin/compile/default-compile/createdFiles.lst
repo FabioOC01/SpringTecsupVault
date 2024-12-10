@@ -11,6 +11,7 @@ com\tecsup\backendadmin\Service\UsuarioService.class
 com\tecsup\backendadmin\Repository\CategoriaProyectoRepository.class
 com\tecsup\backendadmin\Config\WebConfig.class
 com\tecsup\backendadmin\Models\Alumno.class
+com\tecsup\backendadmin\Service\ComentarioService.class
 com\tecsup\backendadmin\Config\SecurityConfig.class
 com\tecsup\backendadmin\Controller\GrupoController.class
 com\tecsup\backendadmin\Models\ProyectoIntegrador.class

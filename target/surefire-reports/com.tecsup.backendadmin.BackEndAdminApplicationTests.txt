@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tecsup.backendadmin.BackEndAdminApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.97 s -- in com.tecsup.backendadmin.BackEndAdminApplicationTests
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.87 s -- in com.tecsup.backendadmin.BackEndAdminApplicationTests
