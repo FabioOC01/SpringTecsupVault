@@ -24,7 +24,7 @@ public class BackEndAdminApplicationTests {
 	@Test
 	public void testObtenerProyectos() {
 
-		ResponseEntity<String> response = restTemplate.getForEntity("/api/proyectos", String.class);
+		ResponseEntity<String> response = restTemplate.getForEntity("/proyectos", String.class);
 
 		assertThat(response.getStatusCodeValue()).isEqualTo(200);
 
@@ -33,7 +33,7 @@ public class BackEndAdminApplicationTests {
 
 	@Test
 	public void testObtenerCategorias() {
-		ResponseEntity<String> response = restTemplate.getForEntity("/api/categorias", String.class);
+		ResponseEntity<String> response = restTemplate.getForEntity("/categorias", String.class);
 
 		assertThat(response.getStatusCodeValue()).isEqualTo(200);
 
@@ -42,7 +42,7 @@ public class BackEndAdminApplicationTests {
 
 	@Test
 	public void testObtenerAños() {
-		ResponseEntity<String> response = restTemplate.getForEntity("/api/ciclo", String.class);
+		ResponseEntity<String> response = restTemplate.getForEntity("/ciclo", String.class);
 
 		assertThat(response.getStatusCodeValue()).isEqualTo(200);
 
