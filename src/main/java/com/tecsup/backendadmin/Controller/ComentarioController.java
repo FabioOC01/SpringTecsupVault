@@ -28,7 +28,6 @@ public class ComentarioController {
         if (comentario.getContenido() == null || comentario.getContenido().isEmpty()) {
             return ResponseEntity.badRequest().body(null);  // Devolver un error si el contenido es nulo
         }
-        comentario.setFecha(LocalDate.now());  // Establece la fecha del comentario
         Comentario comentarioGuardado = comentarioRepository.save(comentario);
         return ResponseEntity.ok(comentarioGuardado);  // Devuelve el comentario guardado
     }

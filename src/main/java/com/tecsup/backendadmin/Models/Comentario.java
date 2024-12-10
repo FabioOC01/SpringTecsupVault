@@ -12,20 +12,18 @@ public class Comentario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)  // Cambiado de LAZY a EAGER
-    @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuario;
+
+    @Column(nullable = false, length = 30)
+    private  String usuario;
 
 
-    @ManyToOne(fetch = FetchType.EAGER)  // Cambiado de LAZY a EAGER
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "proyecto_integrador_id", nullable = false)
     private ProyectoIntegrador proyecto;
 
     @Column(nullable = false, length = 500)
-    private String contenido; // El contenido no debe ser null
+    private String contenido;
 
-    @Column(nullable = false)
-    private LocalDate fecha;
 
     // Getters y setters
     public Long getId() {
@@ -36,11 +34,11 @@ public class Comentario {
         this.id = id;
     }
 
-    public Usuario getUsuario() {
+    public String getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
@@ -60,11 +58,4 @@ public class Comentario {
         this.contenido = contenido;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
 }
